@@ -9,14 +9,11 @@ public class GenericMax{
 	   E max;
 	   if(a.compareTo(b)>0 && a.compareTo(c)>0) 
 		   max = a;
-
 	   else if(b.compareTo(c)>0)
 		   max = b;
-	   
 	   else
 		   max = c;
-	   System.out.println("Maximum is: " + max);
-		   
+	   System.out.println("Maximum is: " + max);   
    }
 	
    public static void main(String[] args) {
