@@ -1,55 +1,27 @@
 package generic;
 
 public class GenericMax{
-	
-   //UC-1: Find max of 3 Integers	
-   public static void max(Integer a, Integer b, Integer c) {
-	   
-	   if(a.compareTo(b)>0 && a.compareTo(c)>0)
-		   System.out.println(a  +" is max");
+	/*
+	 * Re-factored all the 3 to One Generic Method to
+	 *  find the maximum
+	 */
+   public static <E extends Comparable> void maxGeneric(E a, E b, E c) {
+	   E max;
+	   if(a.compareTo(b)>0 && a.compareTo(c)>0) 
+		   max = a;
+
 	   else if(b.compareTo(c)>0)
-		   System.out.println(b + " is max");
-	   else
-		   System.out.println(c + " is max");
+		   max = b;
 	   
+	   else
+		   max = c;
+	   System.out.println("Maximum is: " + max);
+		   
    }
-   
- //UC-2: Find max of 3 Floats	
-   public static void max(Float a, Float b, Float c) {
-	   
-	   if(a.compareTo(b)>0 && a.compareTo(c)>0)
-		   System.out.println(a  +" is max");
-	   else if(b.compareTo(c)>0)
-		   System.out.println(b + " is max");
-	   else
-		   System.out.println(c + " is max");
-	   
-    }
-   
- //UC-3: Find max of 3 Strings	
-   public static void max(String a, String b, String c) {
-	   
-	   if(a.compareTo(b)>0 && a.compareTo(c)>0)
-		   System.out.println(a  +" is max");
-	   else if(b.compareTo(c)>0)
-		   System.out.println(b + " is max");
-	   else
-		   System.out.println(c + " is max");
-	   
-    }
 	
    public static void main(String[] args) {
-	max(33, 14, 5);
-	max(33, 44, 5);
-	max(33, 44, 55);
-	System.out.println("_____________");
-	max(3.3f, 1.4f, 0.5f);
-	max(3.3f, 4.4f, 0.5f);
-	max(3.3f, 4.4f, 5.5f);
-	System.out.println("_____________");
-	max("Welcome", "Hello", "World");
-	max("Welcome", "World", "Hello");
-	max("World", "Welcome", "Hello");
-	System.out.println("_____________");
+	   maxGeneric(1, 2, 3);
+	   maxGeneric(1.2, 3.4, 1.1);
+	   maxGeneric("Welcome", "Hello", "World");
 }
 }
