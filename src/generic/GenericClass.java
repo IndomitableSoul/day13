@@ -1,9 +1,6 @@
 package generic;
 
-/* Refactor-2
-Re-factored to create Generic
-Class to take in 3 variables of
-Generic Type*/
+/* UC: 5*/
 
 public class GenericClass<E extends Comparable>{
 	
