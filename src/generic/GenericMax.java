@@ -14,7 +14,7 @@ public class GenericMax{
 	   
    }
    
- //UC-1: Find max of 3 Floats	
+ //UC-2: Find max of 3 Floats	
    public static void max(Float a, Float b, Float c) {
 	   
 	   if(a.compareTo(b)>0 && a.compareTo(c)>0)
@@ -26,7 +26,7 @@ public class GenericMax{
 	   
     }
    
- //UC-1: Find max of 3 Strings	
+ //UC-3: Find max of 3 Strings	
    public static void max(String a, String b, String c) {
 	   
 	   if(a.compareTo(b)>0 && a.compareTo(c)>0)
@@ -39,7 +39,6 @@ public class GenericMax{
     }
 	
    public static void main(String[] args) {
-	System.out.println("_____________");
 	max(33, 14, 5);
 	max(33, 44, 5);
 	max(33, 44, 55);
