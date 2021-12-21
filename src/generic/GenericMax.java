@@ -1,7 +1,7 @@
 package generic;
 
 public class GenericMax{
-	/*
+	/*Refactor-1
 	 * Re-factored all the 3 to One Generic Method to
 	 *  find the maximum
 	 */
